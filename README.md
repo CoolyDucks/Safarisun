@@ -50,3 +50,5 @@ use file.device;
 file.device.create("example.txt");  
 file.device.write("example.txt", "Hello World!");  
 file.device.read("example.txt");
+
+say("Hello World")
