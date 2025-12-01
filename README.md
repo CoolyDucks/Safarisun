@@ -21,34 +21,4 @@ Safarisun is for developers, learners, and educators who want a **universal lang
 Here’s how you can use **Print, Time, Math & Science, and File commands** together in Safarisun:
 
 ```c
-// === Printing / Output ===
-say("Hello World");     // Simple print
-say:-$ANYTHING$;        // Variable output
-say.right(Dog)$;        // Directional text
-say.right2(wolf)$;      // Chained output
-
-// === Time & Date ===
-use time.device;        // Access local and UTC time
-say("Local Time:")(tag=leftByte)
-    :leftbyte
-time.device(print.animtion:
-:🕕 , 🕖 , 🕘 , 🕤 , 🕥 , 🕟 , 🕞 , 🕜 
-      :time.device
-(UTC.device)
-);
-
-// === Math & Science ===
-math.sin(3.14159/2);   // sin(π/2)
-math.cos(0);           // cos(0)
-math.tan(3.14159/4);   // tan(π/4)
-math.sqrt(16);         // 4
-math.pow(2,8);         // 256
-
-// === File & Directory Management ===
-mkdir MyFolder;                     // Create a folder
-use file.device;                    
-file.device.create("example.txt");  
-file.device.write("example.txt", "Hello World!");  
-file.device.read("example.txt");
-
 say("Hello World")
