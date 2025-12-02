@@ -1,0 +1,12 @@
+mass = 70
+acceleration = 9.8
+time = 5
+initial_velocity = 0
+
+force = mass * acceleration
+final_velocity = initial_velocity + acceleration * time
+distance = initial_velocity * time + 0.5 * acceleration * time * time
+
+say("Force: " + force)
+say("Final Velocity: " + final_velocity)
+say("Distance traveled: " + distance)
