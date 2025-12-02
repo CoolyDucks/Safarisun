@@ -1,0 +1,18 @@
+x = 10
+y = 5
+
+sum = x + y
+diff = x - y
+prod = x * y
+quot = x / y
+
+say("Sum: " + sum)
+say("Difference: " + diff)
+say("Product: " + prod)
+say("Quotient: " + quot)
+
+total = 0
+for i in 1..5 {
+    total = total + i
+}
+say("Total from 1 to 5: " + total)
