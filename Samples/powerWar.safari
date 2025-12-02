@@ -1,0 +1,13 @@
+player1 = math.pow(2, 3)
+player2 = math.pow(3, 2)
+
+say("Player1 power: " + player1)
+say("Player2 power: " + player2)
+
+if player1 > player2 {
+    say("Player1 wins!")
+} else if player2 > player1 {
+    say("Player2 wins!")
+} else {
+    say("It's a tie!")
+}
