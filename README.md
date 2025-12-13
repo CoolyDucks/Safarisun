@@ -16,9 +16,7 @@ Safarisun is for developers, learners, and educators who want a **universal lang
 
 ---
 
-## 📝 Full Example Code
+## 📝 Good Print
 
-Here’s how you can use **Print, Time, Math & Science, and File commands** together in Safarisun:
 
-```c
 say("Hello World")
