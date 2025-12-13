@@ -1,0 +1,40 @@
+name: Safarisun CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Build Environment
+      run: sudo apt-get update && sudo apt-get install -y build-essential
+
+    - name: Build Runtime
+      working-directory: 1.0.1
+      run: |
+        if [ -f ./configure ]; then
+          ./configure
+        else
+          echo "No configure script, skipping"
+        fi
+        make
+
+    - name: Run Tests / Example Programs
+      working-directory: 1.0.1
+      run: |
+        echo 'say("Hello CI World")' > test_example.sfn
+        ./safarisun test_example.sfn
+
+    - name: Upload Executable
+      uses: actions/upload-artifact@v3
+      with:
+        name: safarisun-runtime
+        path: 1.0.1/safarisun
